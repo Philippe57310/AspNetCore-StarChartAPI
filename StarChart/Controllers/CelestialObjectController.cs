@@ -68,7 +68,7 @@ namespace StarChart.Controllers
             DbSet<CelestialObject> celestialObjects = _context.CelestialObjects;
             celestialObjects.Add(celestialObject);
             _context.SaveChanges();
-            return CreatedAtRoute("GetById", new { id=celestialObject.Id, celestial =celestialObject});
+            return CreatedAtRoute("GetById", new { id = celestialObject.Id }, celestialObject);
         }
 
 
